@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <title>Название страницы</title>
+      <style>
+          ul{
+          text-align: center;
+          margin-top: 50px;
+          }
+          li{
+          font-size: 25px;
+          padding: 10px 0 10px 0;
+          list-style-type: none;
+          }
+      </style>
+    <meta name="description" content="Описание страницы" />
+  </head>
+  <body>
+    <ul>
+        {%for book in books%}
+        <li>
+            Автор: {{book.authfname}} {{book.authlname}} - Книга: {{book.bname}} ({{book.book_year}})
+        </li>
+        {%endfor%}
+    </ul>
+  </body>
+</html>
